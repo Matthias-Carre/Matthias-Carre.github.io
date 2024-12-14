@@ -1,0 +1,23 @@
+#gameCanvas {
+    border: 2px solid black; /* Cadre noir de 2 pixels */
+    border-radius: 10px; /* Coins arrondis (optionnel) */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  header, main {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }

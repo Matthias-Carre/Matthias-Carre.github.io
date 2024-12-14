@@ -1,0 +1,42 @@
+Exemple de niveau simple. Les petits carrés sont des joueurs, les rectangles noirs des obstacles, peut-être qui se déplacent. Il y a un chronomètre. Vous pourrez prendre quelques bouts de code dans cet exemple (à refaire bien comme il faut avec des classes JS) https://jsbin.com/fobiha/edit?js,output ou https://jsbin.com/laleka/edit?html,js,output et mieux: https://jsbin.com/gacezog/edit?html,js,output
+FRENCH (english follows, go further!)
+
+Dans ce projet vous allez développer un jeu 2D multi-joueurs simple, mais avec des niveaux évolutifs.
+
+Idée principale de gameplay :
+
+
+ Tous les joueurs sont représentés par un carré de couleur différente. Sur une même machine, le jeu est jouable de 1 à 4 joueurs. Par défaut il sera jouable au clavier, et optionnellement avec des GamePads (vous n’êtes pas obligés d’intégrer cette feature).
+
+
+Les joueurs démarrent tous dans le coin en haut à gauche de la pièce, un décompte 5-4-3-2-1 donne le départ
+
+
+Les joueurs doivent tous atteindre une sortie qui sera par défaut représentée par exemple par un cercle bleu avec une bordure noire, bien visible, situé dans le niveau. Pour le niveau 1, imaginez une pièce rectangulaire avec des murs sur les bords, et en bas à droite le fameux cercle bleu et noir. Dès que le départ est donné, les joueurs doivent foncer vers la sortie. Le premier arrivé a 4 points, le second 3, etc. Ou bien vous pouvez imaginer un scoring basé sur le temps mis pour atteindre la sortie.
+
+
+Les joueurs peuvent aller dans toutes les directions, y compris des diagonales.
+
+
+Les collisions entre joueurs et avec les obstacles sont prises en compte (on ne peut pas traverser les murs, on peut pousser les autres joueurs)
+
+
+Quand les niveaux augmentent, de nouveaux éléments apparaissent 
+Niveaux 2-4 : des murs verticaux apparaissent, le chemin pour atteindre la sortie n’est plus droit, mais il faut suivre les couloirs, de plus en plus compliqués, parfois avec des voies sans issues.
+Niveaux 4-8 : des murs peuvent se déplacer verticalement ou horizontalement
+Niveaux 8-15 (je donne des nos à titre indicatif, vous n’êtes pas obligé de respecter à la lettre) : on a des éléments nouveaux qui apparaissent : des bonus qui augmentent la vitesse du joueur, des malus qui inversent les commandes pendant 3 secondes, des zones sur le parcours qui ralentissent ou qui téléportent ailleurs.  Des ventilateurs font accélérer ou ralentir dans certains couloirs…
+Niveaux 15-20 : certains murs ne doivent pas être touchés sinon on est électrocuté et on repart au début.
+C’est vous qui voyez, on peut ajouter des ennemis, des balles qui rebondissent entre les murs, la possibilité comme dans Mario Kart, de récupérer des éléments qu’on peut lancer ou déposer etc.
+Interrupteurs ou zone sensibles qui quand on passe dessus changent la topologie du niveau
+Sortie qui se déplace au lieu d’être fixe, etc.
+
+L’idée générale est que vous restiez avec des formes géométriques simples pour ne pas perdre trop de temps avec les graphismes, et que vous vous concentriez sur le gameplay et la conception de votre jeu. Bien entendu, je m’attends à avoir des classes Joueur, Obstacle, ObstacleAnimé, Bonus, Malus, Score, Ennemi et des sous-classes, etc. 
+
+Pour le dessin et l’animation, reprenez les bonnes pratiques utilisées dans le mini jeu qui apparaît à partir du Module 2 du cours en ligne (requestAnimationFrame pour l'animation principale, utilisation de la sauvegarde/restauration du contexte graphique dans les méthodes qui dessinent, setInterval pour le spam des ennemis, bibliothèque hammerjs pour le son etc.)
+
+COMMENT SOUMETTRE (pour le 15 Décembre 2024)
+TROIS choses importantes :
+Vous m'envoyez le repo github ou vous m'invitez si c'est privé
+Vous devez héberger votre jeu et fournir le lien pour le tester en ligne (i.e. sur les pages github)
+Un bon README dans le repo, qui explique ce que vous avez fait : conception, difficultés, solutions, comment jouer etc.
+Une petite vidéo (1 minute) hébergée sur youtube est également appréciée....
